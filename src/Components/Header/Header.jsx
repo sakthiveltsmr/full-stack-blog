@@ -10,7 +10,7 @@ export default function Header() {
       </div>
       <img
         className="headerImg"
-        src="https://wallpapercave.com/wp/wp8975771.jpg"
+        src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Desktop-autumn-hd-wallpaper-3D.jpg"
         alt=""
       />
     </div>
