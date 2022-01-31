@@ -7,7 +7,7 @@ header {
   flex-direction: column;
   align-items: center;
   font-family: "Lora", serif;
-  color: #444;
+  color: rgb(240, 58, 58);
 }
 
 .headerTitleSm {
@@ -24,7 +24,7 @@ header {
 
 .headerImg {
   width: 100%;
-  height: 450px;
+  height: 650px;
   margin-top: 80px;
   object-fit: cover;
 }
