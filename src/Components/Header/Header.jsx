@@ -1,18 +1,17 @@
 import React from "react";
 import "./Header.css";
+import bg from "../../image/home.jpg.jpg";
 
-export default function Header() {
+function Header() {
   return (
     <div className="header">
-      <div className="headerTitles">
-        <span className="headerTitleSm">React & Node</span>
-        <span className="headerTitleLg">BLOG APPLICATION</span>
+      <div className="header_titles">
+        <span className="header_title1">MERN-STACK APP</span>
+        <span className="header_title2">BLOG APPLICATION</span>
       </div>
-      <img
-        className="headerImg"
-        src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Desktop-autumn-hd-wallpaper-3D.jpg"
-        alt=""
-      />
+      <img src={bg} alt="backgroud" />
     </div>
   );
 }
+
+export default Header;

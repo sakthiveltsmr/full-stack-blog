@@ -1,0 +1,8 @@
+.posts {
+  display: flex;
+  flex: 9;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url("../../image/postbg.jpg"); */
+  flex-wrap: wrap;
+}
