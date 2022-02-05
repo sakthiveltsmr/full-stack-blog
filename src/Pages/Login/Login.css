@@ -1,0 +1,85 @@
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../image/loginbg.jpg");
+  background-size: cover;
+  /* height: 100vh; */
+}
+.loginTitle {
+  font-size: 50px;
+  filter: drop-shadow(0px 5px 10px #000);
+  color: #fff;
+}
+.loginForm {
+  width: 40vw;
+  /* height: 300px; */
+  padding: 15px;
+  border-radius: 10px;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: rgba(117, 117, 117, 0.6);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.loginForm > label {
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.loginInput {
+  padding: 10px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.loginInput:focus {
+  outline: none;
+}
+
+.loginButton {
+  margin-top: 20px;
+  background: lightcoral;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100px;
+  padding: 5px 10px;
+  align-self: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  cursor: pointer;
+}
+.loginButton:disabled {
+  background-color: rgb(252, 158, 158);
+  cursor: progress;
+}
+.RegisterButton {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100px;
+  padding: 5px 10px;
+  background-color: rgb(74, 130, 214);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  cursor: pointer;
+}
