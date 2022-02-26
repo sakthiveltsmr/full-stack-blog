@@ -34,7 +34,7 @@
   border-bottom: 2px solid rgb(207, 200, 200);
 }
 .about_me {
-  margin-top: 100px;
+  margin-top: 10px;
   margin-left: 2rem;
   font-family: "Lora", serif;
   font-weight: 500;
@@ -49,6 +49,7 @@
 .sidebarList {
   list-style: none;
   margin-bottom: 15px;
+  margin-left: 15px;
 }
 .sidebarListItem {
   display: inline-block;
@@ -66,9 +67,12 @@
   padding: 15px;
   justify-content: center;
 }
-.sidebarSocial > .MuiSvgIcon-root {
+/* .sidebarSocial > .MuiSvgIcon-root {
   margin-right: 15px;
-}
+} */
 .about {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

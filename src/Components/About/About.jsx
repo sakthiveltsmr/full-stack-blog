@@ -27,14 +27,10 @@ function About() {
           <img src={Profile} alt="profile" />
 
           <p className="about_me">
-            I'm Sakthivel from Namakkal.
-            <p>
-              {" "}
-              I did my BE CSE at the Government College of Technology Coimbatore
-              (2020),
-            </p>{" "}
-            I'm looking for a web developer role. As a developer, I could give
-            my full effort work to your reputed company. Thank You...!
+            I'm Sakthivel from Namakkal. I did my BE CSE at the Government
+            College of Technology Coimbatore (2020), I'm looking for a web
+            developer role. As a developer, I could give my full effort work to
+            your reputed company. Thank You...!
           </p>
         </div>
       </div>
