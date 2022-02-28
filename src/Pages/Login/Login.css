@@ -8,8 +8,7 @@
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.5)
     ),
-    /* url("../../image/loginbg.jpg"); */
-      url("https://wallpaperaccess.com/full/400883.jpg");
+    url("../../image/loginbg.jpeg");
 
   background-size: cover;
   /* height: 100vh; */

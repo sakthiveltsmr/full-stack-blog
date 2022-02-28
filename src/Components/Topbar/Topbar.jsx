@@ -5,6 +5,7 @@ import Profile from "../../image/profilePic.png";
 
 export default function Topbar() {
   // const { user, dispatch } = useContext();
+  const user = false;
   // console.log(user);
   const handleLogout = () => {
     // dispatch({ type: "LOGOUT" }); //it will return user,isfetching,error states
@@ -37,7 +38,7 @@ export default function Topbar() {
           </li>
           <li className="topListItem"></li>
           <li className="topListItem" onClick={handleLogout}>
-            {/* {user && "LOGOUT"} */} LOGOUT
+            {user && "LOGOUT"}
           </li>
         </ul>
       </div>
@@ -48,24 +49,24 @@ export default function Topbar() {
               <img className="topImg" src={user.ProfilePic} alt="profile" />
             </Link>
           ) : ( */}
-        <Link className="link" to="/settings">
-          <img className="topImg" src={Profile} alt="profile" />
-        </Link>
-        {/* )
-        ) : ( */}
-        <ul className="topList">
-          <li className="topListItem">
-            <Link className="link" to="/login">
-              LOGIN
-            </Link>
-          </li>
-          <li className="topListItem">
-            <Link className="link" to="/register">
-              REGISTER
-            </Link>
-          </li>
-        </ul>
-        {/* )} */}
+        {user ? (
+          <Link className="link" to="/settings">
+            <img className="topImg" src={Profile} alt="profile" />
+          </Link>
+        ) : (
+          <ul className="topList">
+            <li className="topListItem">
+              <Link className="link" to="/login">
+                LOGIN
+              </Link>
+            </li>
+            <li className="topListItem">
+              <Link className="link" to="/register">
+                REGISTER
+              </Link>
+            </li>
+          </ul>
+        )}
       </div>
     </div>
   );

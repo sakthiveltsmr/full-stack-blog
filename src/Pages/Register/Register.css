@@ -8,7 +8,8 @@
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.5)
     ),
-    url("../../image/loginbg.jpg");
+    url("../../image/register.jpeg");
+
   background-size: cover;
 }
 .registerTitle {

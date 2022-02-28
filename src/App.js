@@ -10,18 +10,24 @@ import Write from "./Components/write/write";
 import Settings from "./Pages/Setting/Settings";
 
 function App() {
-  // const currentUser = true;
+  const currentUser = false;
   return (
     <Router>
       <Topbar />
       <Routes>
         <Route exact path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/write" element={<Write />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/posts/:id" element={<Single />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/write" element={currentUser ? <Write /> : <Register />} />
+        <Route
+          path="/settings"
+          element={currentUser ? <Settings /> : <Register />}
+        />
+        <Route path="/posts/:postid" element={<Single />} />
+        <Route path="/login" element={currentUser ? <Homepage /> : <Login />} />
+        <Route
+          path="/register"
+          element={currentUser ? <Homepage /> : <Register />}
+        />
       </Routes>
     </Router>
   );
