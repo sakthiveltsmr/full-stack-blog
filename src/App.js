@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage";
 import Topbar from "./Components/Topbar/Topbar";
 import About from "./Components/About/About";
+import Single from "./Components/Single/Single";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Write from "./Components/write/write";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/write" element={<Write />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/post/:id" element={<Single />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
