@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Register.css";
 export default function Register() {
@@ -12,7 +13,15 @@ export default function Register() {
     event.preventDefault();
     try {
       setError(false);
-      window.location.replace("/login");
+      const res = await axios.post(
+        "https://sakthi-blog-application.herokuapp.com/api/auth/register",
+        {
+          username,
+          email,
+          password,
+        }
+      );
+      res.data.user && window.location.replace("/login");
     } catch (error) {
       setError(true);
       console.log("Error is:", error);

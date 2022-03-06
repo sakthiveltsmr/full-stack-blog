@@ -1,7 +1,7 @@
-// import axios from "axios";
+import axios from "axios";
 import React, { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
-// import { Context } from "../../Context/Context";
+import { Context } from "../../Context/Context";
 import "./Login.css";
 
 function Login() {
@@ -10,28 +10,28 @@ function Login() {
   let userRef = useRef();
   let passwordRef = useRef();
 
-  //   const { dispatch, isFetching } = useContext(Context);
+  const { dispatch, isFetching } = useContext(Context);
   // console.log("data", isFetching);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // dispatch({ type: "LOGIN_START" });
+    dispatch({ type: "LOGIN_START" });
     try {
-      //   const res = await axios.post(
-      //     "https://muthu-blog-server-api.herokuapp.com/api/auth/login",
-      //     {
-      //       username: userRef.current.value,
-      //       password: passwordRef.current.value,
-      //     }
-      //   );
-      //   dispatch({ type: "LOGIN_SUCCESS", payload: res.data.others });
-      //   userRef = "";
-      //   passwordRef = "";
+      const res = await axios.post(
+        "https://sakthi-blog-application.herokuapp.com/api/auth/login",
+        {
+          username: userRef.current.value,
+          password: passwordRef.current.value,
+        }
+      );
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data.others });
+      userRef = "";
+      passwordRef = "";
     } catch (error) {
-      //   dispatch({ type: "LOGIN_FAILURE" });
+      dispatch({ type: "LOGIN_FAILURE" });
     }
   };
-  //   console.log(isFetching);
+  console.log(isFetching);
 
   return (
     <div className="login">
@@ -41,7 +41,7 @@ function Login() {
         <input
           type="text"
           className="loginInput"
-          placeholder="Enter Your email..."
+          placeholder="Enter Your username..."
           ref={userRef}
         />
         <label>Password</label>
@@ -51,8 +51,7 @@ function Login() {
           placeholder="Enter your password..."
           ref={passwordRef}
         />
-        {/* <button className="loginButton" type="submit" disabled={isFetching}> */}
-        <button className="loginButton" type="submit">
+        <button className="loginButton" type="submit" disabled={isFetching}>
           Login
         </button>
       </form>
