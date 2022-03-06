@@ -1,18 +1,39 @@
 import { useLocation } from "react-router";
+import axios from "axios";
 import Header from "../../Components/Header/Header";
 import "./Homepage.css";
 import Posts from "../../Components/posts/posts";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Loader from "react-loader-spinner";
 export default function Homepage() {
-  const [posts, setPosts] = React.useState([]);
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const { search } = useLocation();
+  const fetchPost = async () => {
+    setLoading(true);
+    const res = await axios.get(
+      "https://sakthi-blog-application.herokuapp.com/api/posts"
+    );
+    console.log(res.data.posts);
+    setPosts(res.data.Posts);
+    setLoading(false);
+  };
+  useEffect(() => {
+    console.log("post mounted in home");
+    fetchPost();
+  }, [search]);
 
-  const location = useLocation();
-  console.log(location);
   return (
     <>
       <Header />
       <div className="home">
-        <Posts posts={posts} />
+        {loading ? (
+          <div className="d-flex justify-content-center m-5">
+            <Loader type="TailSpin" color="#25283D" height={100} width={100} />
+          </div>
+        ) : (
+          <Posts posts={posts} />
+        )}
       </div>
     </>
   );
