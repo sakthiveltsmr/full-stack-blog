@@ -12,28 +12,22 @@ export default function Homepage() {
   const fetchPost = async () => {
     setLoading(true);
     const res = await axios.get(
-      "https://sakthi-blog-application.herokuapp.com/api/posts"
+      "https://sakthi-blog-application.herokuapp.com/api/post"
     );
-    console.log(res.data.posts);
-    setPosts(res.data.Posts);
+    console.log(res.data.post);
+    setPosts(res.data.post);
     setLoading(false);
   };
-  useEffect(() => {
-    console.log("post mounted in home");
-    fetchPost();
-  }, [search]);
+  // useEffect(() => {
+  //   console.log("post mounted in home");
+  //   fetchPost();
+  // }, [search]);
 
   return (
     <>
       <Header />
       <div className="home">
-        {loading ? (
-          <div className="d-flex justify-content-center m-5">
-            <Loader type="TailSpin" color="#25283D" height={100} width={100} />
-          </div>
-        ) : (
-          <Posts posts={posts} />
-        )}
+        <Posts posts={posts} />
       </div>
     </>
   );
