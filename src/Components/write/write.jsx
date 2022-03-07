@@ -37,11 +37,11 @@
 // export default Write;
 import { Add } from "@material-ui/icons";
 import React, { useContext, useState } from "react";
-import "./Write.css";
+import "./write.css";
 // import postImg from "../../image/bg.jpg";
 import axios from "axios";
 import { Context } from "../../Context/Context";
-import Loader from "react-loader-spinner";
+import { TailSpin } from "react-loader-spinner";
 
 function Write() {
   const [title, setTitle] = useState("");
@@ -141,7 +141,7 @@ function Write() {
         </div>
         {loading ? (
           <div className="d-flex justify-content-center submit m-5">
-            <Loader type="Bars" color="#25283D" height={50} width={50} />
+            <TailSpin type="Bars" color="#25283D" height={50} width={50} />
           </div>
         ) : (
           <button className="writeSubmit" type="submit">

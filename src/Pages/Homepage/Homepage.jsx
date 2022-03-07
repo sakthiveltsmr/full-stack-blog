@@ -4,7 +4,7 @@ import Header from "../../Components/Header/Header";
 import "./Homepage.css";
 import Posts from "../../Components/posts/posts";
 import React, { useEffect, useState } from "react";
-import Loader from "react-loader-spinner";
+import { TailSpin } from "react-loader-spinner";
 export default function Homepage() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -12,22 +12,35 @@ export default function Homepage() {
   const fetchPost = async () => {
     setLoading(true);
     const res = await axios.get(
-      "https://sakthi-blog-application.herokuapp.com/api/post"
+      "https://sakthi-blog-application.herokuapp.com/api/posts"
     );
     console.log(res.data.posts);
     setPosts(res.data.posts);
     setLoading(false);
   };
-  // useEffect(() => {
-  //   console.log("post mounted in home");
-  //   fetchPost();
-  // }, [search]);
+  useEffect(() => {
+    console.log("post mounted in home");
+    fetchPost();
+  }, [search]);
 
   return (
     <>
       <Header />
       <div className="home">
-        <Posts posts={posts} />
+        {loading ? (
+          <div className="d-flex justify-content-center m-5">
+            <TailSpin
+              type="TailSpin"
+              color="#25283D"
+              height={100}
+              width={100}
+            />
+          </div>
+        ) : (
+          <Posts posts={posts} />
+        )}
+
+        {/* <Posts posts={posts} /> */}
       </div>
     </>
   );
