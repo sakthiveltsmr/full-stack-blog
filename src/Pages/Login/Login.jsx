@@ -43,7 +43,7 @@ function Login() {
         <input
           type="text"
           className="loginInput"
-          placeholder="Enter Your email..."
+          placeholder="Enter Your username..."
           ref={userRef}
         />
         <label>Password</label>
