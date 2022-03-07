@@ -27,7 +27,7 @@
   font-family: "Kumbh Sans", sans-serif;
 }
 .topleft > .MuiSvgIcon-root {
-  margin-left: 7px;
+  margin-left: 2rem;
 }
 .MuiSvgIcon-root:hover {
   cursor: pointer;
@@ -78,4 +78,9 @@
   border-radius: 50%;
   margin-right: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.titles {
+  /* color: #f86d74; */
+  /* font-size: 2rem; */
+  margin-left: 3rem;
 }

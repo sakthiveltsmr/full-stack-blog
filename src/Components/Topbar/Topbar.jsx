@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Topbar.css";
 import { Link } from "react-router-dom";
 import Profile from "../../image/profilePic.png";
-import { Facebook, GitHub, Mail, WhatsApp } from "@material-ui/icons";
+// import { Facebook, GitHub, Mail, WhatsApp } from "@material-ui/icons";
 import { Context } from "../../Context/Context";
 
 function Topbar() {
@@ -19,12 +19,12 @@ function Topbar() {
   return (
     <div className="Topbar">
       <div className="topleft">
-        {/* <h3>Postagram</h3> */}
-        <Facebook className="facebook" />
+        <h3 className="titles">BlogPost</h3>
+        {/* <Facebook className="facebook" />
 
         <WhatsApp className="whatsapp" />
         <GitHub />
-        <Mail className="mail" />
+        <Mail className="mail" /> */}
       </div>
       <div className="topcenter">
         <ul className="topList">
