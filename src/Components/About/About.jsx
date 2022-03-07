@@ -58,7 +58,6 @@ function About() {
         <span className="about_title">Follow Me</span>
         <div className="aboutSocial">
           <Facebook className="facebook" />
-
           <WhatsApp className="whatsapp" />
           <GitHub className="github" />
           <Mail className="mail" />
