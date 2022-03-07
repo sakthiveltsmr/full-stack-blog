@@ -3,7 +3,7 @@ import "./About.css";
 import Profile from "../../image/profile.jpg";
 import { Facebook, GitHub, Mail, WhatsApp } from "@material-ui/icons";
 import axios from "axios";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function About() {
   const [cates, setCates] = useState([]);
