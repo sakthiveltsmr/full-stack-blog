@@ -76,11 +76,11 @@ function Login() {
           }}
         >
           <p>
-            <b>Email</b> : test123
+            <b>Email</b> : sakthi123
           </p>
           <p>
             {" "}
-            <b>Password</b> : test123
+            <b>Password</b> : sakthi123
           </p>
         </div>
       </div>
