@@ -1,24 +1,24 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import "./About.css";
 import Profile from "../../image/profile.jpg";
 import { Facebook, GitHub, Mail, WhatsApp } from "@material-ui/icons";
-import axios from "axios";
+// import axios from "axios";
 // import { Link } from "react-router-dom";
 
 function About() {
-  const [cates, setCates] = useState([]);
-  // get Category
-  const getCategory = async () => {
-    const res = await axios.get(
-      "https://sakthi-blog-application.herokuapp.com/api/categories"
-    );
-    // console.log(res.data.details);
-    setCates(res.data.postCategory);
-  };
+  // const [cates, setCates] = useState([]);
+  // // get Category
+  // const getCategory = async () => {
+  //   const res = await axios.get(
+  //     "https://sakthi-blog-application.herokuapp.com/api/categories"
+  //   );
+  //   // console.log(res.data.details);
+  //   setCates(res.data.postCategory);
+  // };
 
-  useEffect(() => {
-    getCategory();
-  }, []);
+  // useEffect(() => {
+  //   getCategory();
+  // }, []);
   return (
     <div className="about">
       <div className="about_item">
