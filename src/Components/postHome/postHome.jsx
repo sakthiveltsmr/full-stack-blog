@@ -30,9 +30,9 @@ const PostHome = () => {
 
         <div className="post_info">
           <div className="post_categories"></div>
-          {/* <Link to={`/post/1}`} className="link"> */}
+
           <span className="post_title">CSS</span>
-          {/* </Link> */}
+
           <span className="time">{new Date(Date.now()).toDateString()}</span>
         </div>
         <p className="post_desc">
@@ -47,9 +47,9 @@ const PostHome = () => {
 
         <div className="post_info">
           <div className="post_categories"></div>
-          {/* <Link to={`/post/1}`} className="link"> */}
+
           <span className="post_title">Java Script</span>
-          {/* </Link> */}
+
           <span className="time">{new Date(Date.now()).toDateString()}</span>
         </div>
         <p className="post_desc">
@@ -64,9 +64,9 @@ const PostHome = () => {
 
         <div className="post_info">
           <div className="post_categories"></div>
-          {/* <Link to={`/post/1}`} className="link"> */}
+
           <span className="post_title">React JS</span>
-          {/* </Link> */}
+
           <span className="time">{new Date(Date.now()).toDateString()}</span>
         </div>
         <p className="post_desc">
@@ -82,9 +82,9 @@ const PostHome = () => {
 
         <div className="post_info">
           <div className="post_categories"></div>
-          {/* <Link to={`/post/1}`} className="link"> */}
+
           <span className="post_title">Node JS</span>
-          {/* </Link> */}
+
           <span className="time">{new Date(Date.now()).toDateString()}</span>
         </div>
         <p className="post_desc">
