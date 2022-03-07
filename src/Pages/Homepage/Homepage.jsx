@@ -14,8 +14,8 @@ export default function Homepage() {
     const res = await axios.get(
       "https://sakthi-blog-application.herokuapp.com/api/post"
     );
-    console.log(res.data.post);
-    setPosts(res.data.post);
+    console.log(res.data.posts);
+    setPosts(res.data.posts);
     setLoading(false);
   };
   // useEffect(() => {

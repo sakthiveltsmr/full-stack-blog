@@ -8,7 +8,7 @@ export default function Post({ post }) {
   console.log(post); //returns post details
   return (
     <div className="post" key={post._id}>
-      <img src={post.photo} alt="post pic" />
+      {post.photo && <img src={post.photo} alt="post pic" />}
       <div className="post_info">
         <div className="post_categories">
           {post.categories.map((cate, index) => {
