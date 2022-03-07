@@ -3,12 +3,12 @@ import "./post.css";
 import { Link } from "react-router-dom";
 
 export default function Post({ post }) {
-  // const PF = "https://muthu-blog-server-api.herokuapp.com/images/";
+  const PF = "https://sakthi-blog-application.herokuapp.com/images/";
 
   console.log(post); //returns post details
   return (
     <div className="post" key={post._id}>
-      {post.photo && <img src={post.photo} alt="post pic" />}
+      {post.photo && <img src={PF + post.photo} alt="post pic" />}
       <div className="post_info">
         <div className="post_categories">
           {post.categories.map((cate, index) => {
