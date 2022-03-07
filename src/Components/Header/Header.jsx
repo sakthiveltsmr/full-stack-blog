@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import bg from "../../image/home.jpg.jpg";
+import bg from "../../image/home.jpg";
 
 function Header() {
   return (
@@ -10,6 +10,10 @@ function Header() {
         <span className="header_title2">BLOG APPLICATION</span>
       </div>
       <img src={bg} alt="backgroud" />
+      {/* <img
+        src="https://miro.medium.com/max/1838/0*KB3fdpGT_T4oTd7b"
+        alt="backgroud"
+      /> */}
     </div>
   );
 }
