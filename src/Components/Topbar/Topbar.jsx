@@ -1,67 +1,79 @@
-import { Link } from "react-router-dom";
 import React, { useContext } from "react";
 import "./Topbar.css";
+import { Link } from "react-router-dom";
 import Profile from "../../image/profilePic.png";
+import { Facebook, GitHub, Mail, WhatsApp } from "@material-ui/icons";
+import { Context } from "../../Context/Context";
 
-export default function Topbar() {
-  // const { user, dispatch } = useContext();
-  const user = false;
-  // console.log(user);
+function Topbar() {
+  const { user, dispatch } = useContext(Context);
+  console.log(user);
+
+  const profPic = "https://sakthi-blog-application.herokuapp.com/images/";
+
+  //logout
   const handleLogout = () => {
-    // dispatch({ type: "LOGOUT" }); //it will return user,isfetching,error states
+    dispatch({ type: "LOGOUT" }); //it wil return user,isfetching,error states
     window.location.reload("/login");
   };
   return (
-    <div className="top">
-      <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
+    <div className="Topbar">
+      <div className="topleft">
+        {/* <h3>Postagram</h3> */}
+        <Facebook className="facebook" />
+
+        <WhatsApp className="whatsapp" />
+        <GitHub />
+        <Mail className="mail" />
       </div>
-      <div className="topCenter">
+      <div className="topcenter">
         <ul className="topList">
           <li className="topListItem">
-            <Link className="link" to="/">
+            <Link to="/" className="link">
               HOME
             </Link>
           </li>
+
           <li className="topListItem">
-            <Link className="link" to="/about">
+            <Link to="/about" className="link">
               ABOUT
             </Link>
           </li>
           <li className="topListItem">
-            <Link className="link" to="/write">
+            <Link to="/write" className="link">
               WRITE
             </Link>
           </li>
-          <li className="topListItem"></li>
           <li className="topListItem" onClick={handleLogout}>
             {user && "LOGOUT"}
           </li>
         </ul>
       </div>
-      <div className="topRight">
-        {/* {user ? (
-          user.ProfilePic ? (
-            <Link className="link" to="/settings">
-              <img className="topImg" src={user.ProfilePic} alt="profile" />
-            </Link>
-          ) : ( */}
+
+      <div className="topright">
         {user ? (
-          <Link className="link" to="/settings">
-            <img className="topImg" src={Profile} alt="profile" />
-          </Link>
+          user.profilePic ? (
+            <Link to="/settings" className="link">
+              <img
+                className="topImg"
+                src={profPic + user.profilePic}
+                alt="profile"
+              />
+            </Link>
+          ) : (
+            <Link to="/settings" className="link">
+              <img className="topImg" src={Profile} alt="profile" />
+            </Link>
+          )
         ) : (
           <ul className="topList">
             <li className="topListItem">
-              <Link className="link" to="/login">
+              <Link to="/login" className="link">
                 LOGIN
               </Link>
             </li>
             <li className="topListItem">
-              <Link className="link" to="/register">
+              <Link to="/register" className="link">
                 REGISTER
               </Link>
             </li>
@@ -71,3 +83,5 @@ export default function Topbar() {
     </div>
   );
 }
+
+export default Topbar;

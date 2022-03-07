@@ -1,4 +1,4 @@
-.settings {
+/* .settings {
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
@@ -10,10 +10,10 @@
     ),
     url("../../image/setting.jpg");
   /* url("https://swall.teahub.io/photos/small/55-552795_wallpaper-laptop-macbook-iphone-apple-journal-laptop-hd.jpg"); */
-  background-size: cover;
-  /* height: 100vh; */
-}
-
+/* background-size: cover; */
+/* height: 100vh; */
+/* } */
+/* 
 .settingsWrapper {
   flex: 9;
   padding: 20px;
@@ -126,4 +126,95 @@
 
 .settingsSubmitButton:hover {
   background-color: rgb(1, 114, 114);
+} */
+.settings {
+  display: flex;
+}
+.settingsWrapper {
+  flex: 9;
+  padding: 20px;
+}
+
+.settingsTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settingsUpdate {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: lightcoral;
+}
+.settingsDelete {
+  color: red;
+  font-size: 15px;
+  cursor: pointer;
+}
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.success {
+  font-family: fantasy;
+  font-size: 20px;
+  font-weight: 600;
+  color: tomato;
+  height: 40px;
+  align-self: center;
+  position: absolute;
+  top: 50px;
+}
+
+.settingsPP {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+.settingsPP > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.settingsPP > label > .MuiSvgIcon-root {
+  color: #fff;
+}
+.settingsPPIcon {
+  width: 25px;
+  height: 25px;
+  background-color: lightcoral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.settingsForm > label {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #444;
+  font-family: "josefin sans";
+}
+.settingsForm > input {
+  color: #666;
+  margin: 10px 0;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+.settingsForm > input:focus {
+  outline: none;
+}
+.settingsSubmit {
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  background: teal;
+  align-self: center;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px;
 }
