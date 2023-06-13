@@ -16,7 +16,7 @@ function Login() {
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post(
-        "https://sakthi-blog-application.herokuapp.com/api/auth/login",
+        "https://blogs-3wcv.onrender.com/api/auth/login",
         {
           username: userRef.current.value,
           password: passwordRef.current.value,
