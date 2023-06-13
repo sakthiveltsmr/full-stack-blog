@@ -9,7 +9,7 @@ import { Context } from "../../Context/Context";
 function Settings() {
   const { user, dispatch } = useContext(Context);
 
-  const profPic = "https://sakthi-blog-application.herokuapp.com/images/";
+  const profPic = "https://blogs-3wcv.onrender.com/images/";
   const [file, setFile] = useState(null);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -40,7 +40,7 @@ function Settings() {
       try {
         //image uploaded with new image,filename
         await axios.post(
-          `https://sakthi-blog-application.herokuapp.com/api/upload/`,
+          `https://blogs-3wcv.onrender.com/api/upload/`,
           data
         );
       } catch (error) {
@@ -49,7 +49,7 @@ function Settings() {
     }
     try {
       const res = await axios.put(
-        `https://sakthi-blog-application.herokuapp.com/api/users/${user._id}`,
+        `https://blogs-3wcv.onrender.com/api/users/${user._id}`,
         updatedUser
       );
       setSuccess(true);
