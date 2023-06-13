@@ -12,7 +12,7 @@ export default function Homepage() {
   const fetchPost = async () => {
     setLoading(true);
     const res = await axios.get(
-      "https://sakthi-blog-application.herokuapp.com/api/posts"
+      "https://blogs-3wcv.onrender.com/api/posts"
     );
     console.log(res.data.posts);
     setPosts(res.data.posts);
