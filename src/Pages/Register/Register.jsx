@@ -14,7 +14,7 @@ export default function Register() {
     try {
       setError(false);
       const res = await axios.post(
-        "https://sakthi-blog-application.herokuapp.com/api/auth/register",
+        "https://blogs-3wcv.onrender.com/api/auth/register",
         {
           username,
           email,
